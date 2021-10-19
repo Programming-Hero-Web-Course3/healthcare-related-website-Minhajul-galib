@@ -1,0 +1,27 @@
+.home-service{
+
+}
+.home-service h4{
+    text-align: center;
+    padding-top: 5%;
+    color: #031c32;
+    font-family: emoji;
+    font-size: 66px;
+}
+.home-service h6 {
+    font-family: cursive;
+    text-align: center;
+    color: #77a30c;
+    font-size: 18px;
+    border: 1px solid #77a35f;
+    border-width: 0px 0px 1px 0px;
+    width: 32%;
+    margin: 0px auto;
+    padding-bottom: 1%;
+}
+.home-service-div {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 7% 7%;
+    gap: 2% 1%;
+}

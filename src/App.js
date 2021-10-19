@@ -1,23 +1,53 @@
-import logo from './logo.svg';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
+import Header from './Components/AllExist/Header/Header';
+import Home from './Components/Home/Home';
+import About from './Components/About/About';
+import Contact from './Components/Contact/Contact';
+import LogIn from './Components/LogIn/Login';
+import NotFound from './Components/NotFound/NotFound';
+// import WidgetFooter from './Components/AllExist/WidgetFooter/WidgetFooter';
+import Footer from './Components/AllExist/Footer/Footer';
+import Details from './Components/Details/Details';
+import Registration from './Components/Registration/Registration';
+import AuthProvider from './Context/AuthProvider';
+import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <AuthProvider>
+          <Router>
+            <Header></Header>
+            <Switch>
+              <Route exact path="/">
+                <Home></Home>
+              </Route>
+              <Route exact path="/home">
+                <Home></Home>
+              </Route>
+              <Route path="/about">
+                <About></About>
+              </Route>
+              <Route path="/contact">
+                <Contact></Contact>
+              </Route>
+              <PrivateRoute exact path="/details/:Id">
+              <Details></Details>
+              </PrivateRoute>
+              <Route path="/login">
+                <LogIn></LogIn>
+              </Route>
+              <Route path="/registration">
+                <Registration></Registration>
+              </Route>
+              <Route path="*">
+                <NotFound></NotFound>
+              </Route>
+            </Switch>
+            <Footer></Footer>
+          </Router>
+      </AuthProvider>
     </div>
   );
 }

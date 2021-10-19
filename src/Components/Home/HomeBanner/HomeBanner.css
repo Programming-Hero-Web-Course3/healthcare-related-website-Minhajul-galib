@@ -1,0 +1,10 @@
+.home-banner-img-div{
+    position: relative;
+}
+.home-banner-img{
+    height: 500px;
+}
+h3{
+    font-size: 80px;
+    color: white;
+}

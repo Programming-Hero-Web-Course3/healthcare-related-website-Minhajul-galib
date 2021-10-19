@@ -1,0 +1,33 @@
+
+.main-details {
+    background-color: #cff4ff;
+    padding: 2% 0;
+}
+.details {
+    text-align: center;
+    background-color: #ededed;
+    width: 48%;
+    border: 5px solid #fff;
+    margin: 0% auto;
+    border-radius: 9px;
+}
+.details h2 {
+    padding: 5% 0 2%;
+    font-size: 50px;
+    color: #163379;
+    font-family: auto;
+    font-weight: 700;
+}
+.details div {
+    width: 43%;
+    margin: 0 auto;
+    padding-top: 2%;
+}
+.main-details {
+    background-color: #cff4ff;
+}
+.description {
+    width: 53%;
+    margin: 0px auto;
+    padding-top: 3%;
+}

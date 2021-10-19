@@ -1,0 +1,28 @@
+.about-banner {
+    min-height: 80vh;
+    background-image: url('../../image/about.jpg');
+    background-size: cover;
+}
+.about-banner-div {
+    padding: 0 26%;
+    background: #163379cc;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.about-banner-div h1 {
+    font-family: revert;
+    font-size: 55px;
+    color: white;
+}
+.about-banner-div p {
+    text-align: center;
+    font-family: cursive;
+    color: aquamarine;
+    padding-top: 5%;
+    border: 1px solid white;
+    border-width: 0px 0px 1px 0px;
+    padding-bottom: 2%;
+}

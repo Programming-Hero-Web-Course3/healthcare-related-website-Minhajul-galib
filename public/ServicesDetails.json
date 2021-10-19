@@ -1,0 +1,93 @@
+{
+    "services":[
+        {
+          "id": 1,
+          "title": "Assisted Living",
+          "by": "Jhon bee",
+          "price": 4000,
+          "rate": 4.9,
+          "session": "4days",
+          "comment" : 15,
+          "description": "Day in and day out Nursing and Medial Services gives custom-made care to individuals in their cabin who are attempting to oversee.",
+          "image": "http://unlockdesizn.com/html/health-and-beauty/comfort-home/demo/images/services/4.jpg"
+        },
+        {
+          "id": 2,
+          "title": "Primary Health Care",
+          "by": "Jee Don",
+          "price": 3000,
+          "rate": 3.5,
+          "session": "3days",
+          "comment" : 16,
+          "description": "We trust that growth influences each individual in an unexpected way, and that each individual can profit by an interesting, individualized care.",
+          "image": "http://unlockdesizn.com/html/health-and-beauty/comfort-home/demo/images/services/5.jpg"
+        },
+        {
+          "id": 3,
+          "title": "Resident Care",
+          "by": "D V William",
+          "price": 11000,
+          "rate": 4.5,
+          "session": "7days",
+          "comment" : 11,
+          "description": "This level of care and supervision is for individuals who can't live without anyone else's input yet who needn't bother with 24 hour nursing care.",
+          "image": "http://unlockdesizn.com/html/health-and-beauty/comfort-home/demo/images/services/6.jpg"
+        },
+        {
+          "id": 4,
+          "title": "Housekeeping Service",
+          "by": "Frowad dev",
+          "price": 4000,
+          "rate": 4,
+          "session": "4days",
+          "comment" : 12,
+          "description": "Our Medical Social Workers take care of patients and families who encounter challenges in adapting to mental, social and emerging from.",
+          "image": "http://unlockdesizn.com/html/health-and-beauty/comfort-home/demo/images/services/7.jpg"
+        },
+        {
+          "id": 5,
+          "title": "Rehabilitation Service",
+          "by": "Thomas Stone",
+          "price": 8000,
+          "rate": 4.6,
+          "session": "7days",
+          "comment" : 13,
+          "description": "our Rehabilitation Services gives exhaustive therapeutic and professional recovery to deliver a representative's obstructions to employ ability.",
+          "image": "http://unlockdesizn.com/html/health-and-beauty/comfort-home/demo/images/services/8.jpg"
+        },
+        {
+          "id": 6,
+          "title": "Qualified Doctors",
+          "by": "Jack Zoo",
+          "price": 8000,
+          "rate": 4.7,
+          "session": "8days",
+          "comment" : 17,
+          "description": "Subsequent to giving conclusions, a specialist treats patients who are experiencing sicknesses and wounds. A specialist is likewise called a doctor.",
+          "image": "http://unlockdesizn.com/html/health-and-beauty/comfort-home/demo/images/services/9.jpg"
+        },
+        {
+          "id": 7,
+          "title": "Heart Institute",
+          "by": "W B Smith",
+          "price": 9000,
+          "rate": 4.8,
+          "session": "7days",
+          "comment" : 16,
+          "description": "This charge $195 incorporates member materials, and additionally a nibble and supper on Monday and breakfast and lunch on Tuesday.Heart Institute",
+          "image": "http://unlockdesizn.com/html/health-and-beauty/comfort-home/demo/images/services/10.jpg"
+        },
+        {
+          "id": 8,
+          "title": "Medicine Facilities",
+          "by": "Tony Roy",
+          "price": 10000,
+          "rate": 5,
+          "session": "5days",
+          "comment" : 25,
+          "description": "Well being offices are spots that give medicinal services. They incorporate healing facilities, for example, birthing focuses and psychiatric care focuses.",
+          "image": "http://unlockdesizn.com/html/health-and-beauty/comfort-home/demo/images/services/11.jpg"
+        }
+      ]
+      
+}
