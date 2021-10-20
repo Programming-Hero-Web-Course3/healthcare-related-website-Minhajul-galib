@@ -5,9 +5,9 @@ This is Live Site Link [CLICK HERE](https://medical-care-galib-10.netlify.app/).
 ### `About Medical care`
 - This Website is medicat website
 - By this website you can know about our--
-	-- Institution
-	-- Services
-	-- Doctors
+	- Institution
+	- Services
+	- Doctors
 
 
 ### `About Website Code`
