@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import initializeAuthentication from "../Firebase/Firebase.init";
-import { getAuth, signInWithPopup, GoogleAuthProvider, GithubAuthProvider, onAuthStateChanged, createUserWithEmailAndPassword, signOut } from "firebase/auth";
+import { getAuth, signInWithPopup, GoogleAuthProvider, GithubAuthProvider, onAuthStateChanged, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "firebase/auth";
 
 
 initializeAuthentication();
@@ -8,28 +8,21 @@ initializeAuthentication();
 const useFirebase = () =>{
     const [user, setUser] = useState({});
     const [error, setError] = useState('');
+    const [isLoading, setIsLoading] = useState(true);
     const auth = getAuth();
 
 
     const googleProvider = new GoogleAuthProvider();
     const signInWithGoogle = () =>{
-        signInWithPopup(auth, googleProvider)
-        .then(result =>{
-            console.log(result.user);
-            setUser(result.user)
-        })
-        .catch(error =>{
-            setError(error.message);
-        })
+        return signInWithPopup(auth, googleProvider);
+        
     }
 
 
     const githubProvider = new GithubAuthProvider();
     const signInUsingGithub =()=>{
-        signInWithPopup(auth, githubProvider)
-        .then(result =>{
-            setUser(result.user);
-        })
+        return signInWithPopup(auth, githubProvider)
+        
     }
 
     
@@ -43,19 +36,24 @@ const useFirebase = () =>{
     const handlePasswordChange = e =>{
         setPassword(e.target.value);
     }
+    
     const handleRegistration = e =>{
-        createUserWithEmailAndPassword(auth, email, password)
-        .then(result =>{
-            const user = result.user;
-            console.log(user);
-        })
-        e.preventDefault();
+        return createUserWithEmailAndPassword(auth, email, password)
+        
+    }
+
+    const processLogIn = e =>{
+        
+        return signInWithEmailAndPassword(auth, email, password)
+        
     }
 
     const logOut =() =>{
         signOut(auth)
         .then(()=>{
             setUser({});
+            localStorage.removeItem('loggedInUser')
+
         })
     }
     useEffect( ()=>{
@@ -63,9 +61,30 @@ const useFirebase = () =>{
             if(user){
                 console.log('inside state change', user);
                 setUser(user);
+                localStorage.setItem('loggedInUser',user.email);
             }
+        
+            setIsLoading(false)
         })
     }, [])
+
+    // useEffect(() => {
+    //     firebase.auth().onAuthStateChanged((user) => {
+    //       if (user) {
+    //           // User is signed in, see docs for a list of available properties
+    //           // https://firebase.google.com/docs/reference/js/firebase.User
+    //           var uid = user.uid;
+        
+    //           console.log(user)
+    //           setLoggedInUser({ email: user.email })
+    //           // ...
+    //       } else {
+        
+    //           setLoggedInUser({})
+    //       }
+    //     });
+    //   },[])
+      
 
     return{
         user,
@@ -74,6 +93,8 @@ const useFirebase = () =>{
         signInUsingGithub,
         handleEmailChange,
         handlePasswordChange,
+        processLogIn,
+        isLoading,
         handleRegistration,
         logOut
     }

@@ -4,6 +4,7 @@ import './HomeAllService.css'
 
 const HomeAllService = (props) => {
     const {image, description, title, id} = props.service
+      
     const btnUrl = `/details/${id}`;
     return (
         <div className="home-single-service">

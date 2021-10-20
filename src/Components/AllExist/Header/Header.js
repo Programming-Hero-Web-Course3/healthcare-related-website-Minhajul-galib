@@ -1,25 +1,30 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import logo from '../../../image/logo.png'
-import demoIcon from '../../../image/demo-icon.png'
+import demoIcon from '../../../image/register.png'
 import './Header.css'
-import Button from '@restart/ui/esm/Button';
 import useAuth from '../../../Hooks/useAuth';
+import { HashLink } from 'react-router-hash-link';
 
 const Header = () => {
+    let headerShowBtn = '';
     const { user, logOut} = useAuth();
-
+    if(user?.email){
+        headerShowBtn = <Link onClick={logOut} className="btn btn-success">LogOut</Link>
+    }else{
+        headerShowBtn = <Link to="/registration" className="btn btn-primary" >LogIn</Link>
+    }
     return (
         <div className="header">
             <div className="top-bar d-flex">
                 <div className="logo">
-                    <img src={logo} alt="" />
+                    <Link to="/"><img src={logo} alt="" /></Link>
                 </div>
                 <div className="top-bar-details">
                     <ol className="d-flex">
                         <li>{user?.email}</li>
                         <li>{user.displayName} </li>
-                        {user?.email && <Button onClick={logOut} className="btn btn-primary">LogOut</Button>}
+                        {headerShowBtn}
                     </ol>
                 </div>
             </div>
@@ -27,18 +32,18 @@ const Header = () => {
                 <div>
                 <Link to="/home">HOME</Link>
                 </div>
-                <div>
+                <div> 
                 <Link to="/about">ABOUT</Link>
+                </div>
+                <div>
+                <HashLink smooth to="/home#services">SERVICES</HashLink>
                 </div>
                 <div>
                 <Link to="/contact">CONTACT</Link>
                 </div>
-                <div>
-                <Link to="/registration" style={{'padding': '11% 12%'}}>REGISTRATION</Link>
-                </div>
                 
                 <div className="menubar-img">
-                <img src={user?.photoURL || demoIcon } alt="" />
+                <Link to="/dashboard"><img src={user?.photoURL || demoIcon } alt="" /></Link>
                 </div>
             </div>
         </div>

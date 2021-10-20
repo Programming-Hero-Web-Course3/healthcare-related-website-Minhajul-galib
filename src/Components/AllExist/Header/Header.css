@@ -7,15 +7,16 @@
     padding: 1.5% 17%;
 }
 .logo {
-    width: 42%;
+    width: 45%;
 }
 .logo img{
     width: 60%;
 }
 .top-bar-details {
-    width: 58%;
+    width: 70%;
 }
 .top-bar-details li {
+
     list-style: none;
     color: white;
     border: 1px solid #fff;
@@ -48,7 +49,7 @@
 }
 
 .menu-bar div:nth-child(5) {
-    padding: .3% 0% .34%;
+    padding: .7% 0% 0.9%;
 }
 
 .menu-bar a {

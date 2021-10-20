@@ -7,7 +7,7 @@ const Services = () => {
     const [services] = useServices();
     console.log(services);
     return (
-        <div className="home-service">
+        <div className="home-service" id="services">
             <h4>Our Services</h4>
             <h6>We have enough capability to take care your health</h6>
             <div className="home-service-div">

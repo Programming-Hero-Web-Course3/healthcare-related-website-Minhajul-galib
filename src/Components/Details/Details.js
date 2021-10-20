@@ -13,7 +13,7 @@ const Details = () => {
         .then(data=> setDetails(data.services))
     }, [])
     
-    useEffect(() =>{
+    useEffect(() =>{ 
         
         const findSingleDetails = details.find(singleDetails => singleDetails.id == Id )
             console.log(findSingleDetails);

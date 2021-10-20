@@ -3,6 +3,7 @@ import './App.css';
 import Header from './Components/AllExist/Header/Header';
 import Home from './Components/Home/Home';
 import About from './Components/About/About';
+import HomePageServices from './Components/Home/HomeServices/HomePageServices'
 import Contact from './Components/Contact/Contact';
 import LogIn from './Components/LogIn/Login';
 import NotFound from './Components/NotFound/NotFound';
@@ -12,6 +13,7 @@ import Details from './Components/Details/Details';
 import Registration from './Components/Registration/Registration';
 import AuthProvider from './Context/AuthProvider';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
+import DashBoard from './Components/DashBoard/DashBoard';
 
 function App() {
   return (
@@ -26,9 +28,9 @@ function App() {
               <Route exact path="/home">
                 <Home></Home>
               </Route>
-              <Route path="/about">
+              <PrivateRoute exact path="/about">
                 <About></About>
-              </Route>
+              </PrivateRoute>
               <Route path="/contact">
                 <Contact></Contact>
               </Route>
@@ -37,10 +39,13 @@ function App() {
               </PrivateRoute>
               <Route path="/login">
                 <LogIn></LogIn>
-              </Route>
+              </Route> 
               <Route path="/registration">
                 <Registration></Registration>
               </Route>
+              <PrivateRoute path="/dashboard">
+                <DashBoard></DashBoard>
+              </PrivateRoute>
               <Route path="*">
                 <NotFound></NotFound>
               </Route>

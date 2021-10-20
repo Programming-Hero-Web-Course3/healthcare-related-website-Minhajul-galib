@@ -26,3 +26,19 @@
     border-width: 0px 0px 1px 0px;
     padding-bottom: 2%;
 }
+
+.about-info{
+    display: flex!important;
+    padding: 3% 6%;
+}
+.about-info-1 {
+    width: 50%;
+}
+.about-info-2 {
+    padding: 0 9%;
+    width: 50%;
+}
+.about-info-2 h4 {
+    padding-top: 45%;
+    padding-bottom: 4%;
+}

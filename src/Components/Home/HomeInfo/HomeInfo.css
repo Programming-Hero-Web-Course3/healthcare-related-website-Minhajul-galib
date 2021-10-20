@@ -1,0 +1,69 @@
+.home-info{
+
+}
+.offer {
+    background-color: #0a2156;
+    padding: 3% 7%;
+}
+.offer h2 {
+    padding-top: 2%;
+    color: aliceblue;
+    text-align: center;
+}
+.offer-div {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 4% 0 7%;
+    grid-gap: 9% 3%;
+    gap: 9% 3%;
+}
+.offer-1{
+    background-image: url('/src/image/offer-1.jpg');
+    background-size: cover;
+}
+.offer-div-text {
+    background-color: rgb(15 88 253 / 77%);
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 19% 0px;
+    color: aliceblue;
+    font-size: 27px;
+    font-weight: 700;
+}
+.offer-2{
+    background-image: url('/src/image/offer-2.jpg');
+    background-size: cover;
+}
+
+.offer-3{
+    background-image: url('/src/image/offer-3.jpg');
+    background-size: cover;
+}
+
+.offer-4{
+    background-image: url('/src/image/offer-4.jpg');
+    background-size: cover;
+}
+.offer-5{
+    background-image: url('/src/image/offer-5.jpg');
+    background-size: cover;
+}
+.offer-6{
+    background-image: url('/src/image/offer-6.jpg');
+    background-size: cover;
+}
+
+
+/* work-div! */
+.work {
+    background-color: #ecf1ff;
+    border: 1px solid #b1becf;
+    border-width: 7px 0px 7px 0px;
+}
+.work-div {
+    padding: 1% 7%;
+}
+.work-div img {
+    margin: 0 7%;
+}
